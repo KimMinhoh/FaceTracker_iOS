@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E2AC87C19C6707A00E7BB72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC87B19C6707A00E7BB72 /* Foundation.framework */; };
+		5E2AC87E19C6707A00E7BB72 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC87D19C6707A00E7BB72 /* CoreGraphics.framework */; };
+		5E2AC88019C6707A00E7BB72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC87F19C6707A00E7BB72 /* UIKit.framework */; };
+		5E2AC88619C6707A00E7BB72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E2AC88419C6707A00E7BB72 /* InfoPlist.strings */; };
+		5E2AC88819C6707A00E7BB72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2AC88719C6707A00E7BB72 /* main.m */; };
+		5E2AC88C19C6707A00E7BB72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2AC88B19C6707A00E7BB72 /* AppDelegate.m */; };
+		5E2AC88F19C6707A00E7BB72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2AC88D19C6707A00E7BB72 /* Main.storyboard */; };
+		5E2AC89219C6707A00E7BB72 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5E2AC89119C6707A00E7BB72 /* ViewController.mm */; };
+		5E2AC89419C6707A00E7BB72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2AC89319C6707A00E7BB72 /* Images.xcassets */; };
+		5E2AC89B19C6707A00E7BB72 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC89A19C6707A00E7BB72 /* XCTest.framework */; };
+		5E2AC89C19C6707A00E7BB72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC87B19C6707A00E7BB72 /* Foundation.framework */; };
+		5E2AC89D19C6707A00E7BB72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC87F19C6707A00E7BB72 /* UIKit.framework */; };
+		5E2AC8A519C6707A00E7BB72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E2AC8A319C6707A00E7BB72 /* InfoPlist.strings */; };
+		5E2AC8A719C6707A00E7BB72 /* FaceTracker_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2AC8A619C6707A00E7BB72 /* FaceTracker_iOSTests.m */; };
+		5E2AC8B819C6720E00E7BB72 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC8B019C6720E00E7BB72 /* QuartzCore.framework */; };
+		5E2AC8B919C6720E00E7BB72 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC8B119C6720E00E7BB72 /* CoreVideo.framework */; };
+		5E2AC8BA19C6720E00E7BB72 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC8B219C6720E00E7BB72 /* CoreMedia.framework */; };
+		5E2AC8BB19C6720E00E7BB72 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC8B319C6720E00E7BB72 /* CoreImage.framework */; };
+		5E2AC8BC19C6720E00E7BB72 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC8B419C6720E00E7BB72 /* AVFoundation.framework */; };
+		5E2AC8BD19C6720E00E7BB72 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC8B519C6720E00E7BB72 /* AssetsLibrary.framework */; };
+		5E2AC8BE19C6720E00E7BB72 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC8B619C6720E00E7BB72 /* Accelerate.framework */; };
+		5E2AC8BF19C6720E00E7BB72 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2AC8B719C6720E00E7BB72 /* opencv2.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E2AC89E19C6707A00E7BB72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E2AC87019C6707A00E7BB72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E2AC87719C6707A00E7BB72;
+			remoteInfo = FaceTracker_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5E2AC87819C6707A00E7BB72 /* FaceTracker_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceTracker_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E2AC87B19C6707A00E7BB72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5E2AC87D19C6707A00E7BB72 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5E2AC87F19C6707A00E7BB72 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5E2AC88319C6707A00E7BB72 /* FaceTracker_iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FaceTracker_iOS-Info.plist"; sourceTree = "<group>"; };
+		5E2AC88519C6707A00E7BB72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5E2AC88719C6707A00E7BB72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E2AC88919C6707A00E7BB72 /* FaceTracker_iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceTracker_iOS-Prefix.pch"; sourceTree = "<group>"; };
+		5E2AC88A19C6707A00E7BB72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5E2AC88B19C6707A00E7BB72 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5E2AC88E19C6707A00E7BB72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E2AC89019C6707A00E7BB72 /* ViewController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ViewController.hpp; sourceTree = "<group>"; };
+		5E2AC89119C6707A00E7BB72 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		5E2AC89319C6707A00E7BB72 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5E2AC89919C6707A00E7BB72 /* FaceTracker_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceTracker_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E2AC89A19C6707A00E7BB72 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5E2AC8A219C6707A00E7BB72 /* FaceTracker_iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FaceTracker_iOSTests-Info.plist"; sourceTree = "<group>"; };
+		5E2AC8A419C6707A00E7BB72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5E2AC8A619C6707A00E7BB72 /* FaceTracker_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceTracker_iOSTests.m; sourceTree = "<group>"; };
+		5E2AC8B019C6720E00E7BB72 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
+		5E2AC8B119C6720E00E7BB72 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreVideo.framework; sourceTree = "<group>"; };
+		5E2AC8B219C6720E00E7BB72 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreMedia.framework; sourceTree = "<group>"; };
+		5E2AC8B319C6720E00E7BB72 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreImage.framework; sourceTree = "<group>"; };
+		5E2AC8B419C6720E00E7BB72 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVFoundation.framework; sourceTree = "<group>"; };
+		5E2AC8B519C6720E00E7BB72 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AssetsLibrary.framework; sourceTree = "<group>"; };
+		5E2AC8B619C6720E00E7BB72 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Accelerate.framework; sourceTree = "<group>"; };
+		5E2AC8B719C6720E00E7BB72 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E2AC87519C6707A00E7BB72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E2AC8BC19C6720E00E7BB72 /* AVFoundation.framework in Frameworks */,
+				5E2AC8BA19C6720E00E7BB72 /* CoreMedia.framework in Frameworks */,
+				5E2AC8B819C6720E00E7BB72 /* QuartzCore.framework in Frameworks */,
+				5E2AC8BB19C6720E00E7BB72 /* CoreImage.framework in Frameworks */,
+				5E2AC87E19C6707A00E7BB72 /* CoreGraphics.framework in Frameworks */,
+				5E2AC88019C6707A00E7BB72 /* UIKit.framework in Frameworks */,
+				5E2AC8BD19C6720E00E7BB72 /* AssetsLibrary.framework in Frameworks */,
+				5E2AC8BE19C6720E00E7BB72 /* Accelerate.framework in Frameworks */,
+				5E2AC87C19C6707A00E7BB72 /* Foundation.framework in Frameworks */,
+				5E2AC8B919C6720E00E7BB72 /* CoreVideo.framework in Frameworks */,
+				5E2AC8BF19C6720E00E7BB72 /* opencv2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E2AC89619C6707A00E7BB72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E2AC89B19C6707A00E7BB72 /* XCTest.framework in Frameworks */,
+				5E2AC89D19C6707A00E7BB72 /* UIKit.framework in Frameworks */,
+				5E2AC89C19C6707A00E7BB72 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E2AC86F19C6707A00E7BB72 = {
+			isa = PBXGroup;
+			children = (
+				5E2AC88119C6707A00E7BB72 /* FaceTracker_iOS */,
+				5E2AC8A019C6707A00E7BB72 /* FaceTracker_iOSTests */,
+				5E2AC87A19C6707A00E7BB72 /* Frameworks */,
+				5E2AC87919C6707A00E7BB72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5E2AC87919C6707A00E7BB72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E2AC87819C6707A00E7BB72 /* FaceTracker_iOS.app */,
+				5E2AC89919C6707A00E7BB72 /* FaceTracker_iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E2AC87A19C6707A00E7BB72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E2AC8B019C6720E00E7BB72 /* QuartzCore.framework */,
+				5E2AC8B119C6720E00E7BB72 /* CoreVideo.framework */,
+				5E2AC8B219C6720E00E7BB72 /* CoreMedia.framework */,
+				5E2AC8B319C6720E00E7BB72 /* CoreImage.framework */,
+				5E2AC8B419C6720E00E7BB72 /* AVFoundation.framework */,
+				5E2AC8B519C6720E00E7BB72 /* AssetsLibrary.framework */,
+				5E2AC8B619C6720E00E7BB72 /* Accelerate.framework */,
+				5E2AC8B719C6720E00E7BB72 /* opencv2.framework */,
+				5E2AC87B19C6707A00E7BB72 /* Foundation.framework */,
+				5E2AC87D19C6707A00E7BB72 /* CoreGraphics.framework */,
+				5E2AC87F19C6707A00E7BB72 /* UIKit.framework */,
+				5E2AC89A19C6707A00E7BB72 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E2AC88119C6707A00E7BB72 /* FaceTracker_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5E2AC88A19C6707A00E7BB72 /* AppDelegate.h */,
+				5E2AC88B19C6707A00E7BB72 /* AppDelegate.m */,
+				5E2AC88D19C6707A00E7BB72 /* Main.storyboard */,
+				5E2AC89019C6707A00E7BB72 /* ViewController.hpp */,
+				5E2AC89119C6707A00E7BB72 /* ViewController.mm */,
+				5E2AC89319C6707A00E7BB72 /* Images.xcassets */,
+				5E2AC88219C6707A00E7BB72 /* Supporting Files */,
+			);
+			path = FaceTracker_iOS;
+			sourceTree = "<group>";
+		};
+		5E2AC88219C6707A00E7BB72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E2AC88319C6707A00E7BB72 /* FaceTracker_iOS-Info.plist */,
+				5E2AC88419C6707A00E7BB72 /* InfoPlist.strings */,
+				5E2AC88719C6707A00E7BB72 /* main.m */,
+				5E2AC88919C6707A00E7BB72 /* FaceTracker_iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E2AC8A019C6707A00E7BB72 /* FaceTracker_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E2AC8A619C6707A00E7BB72 /* FaceTracker_iOSTests.m */,
+				5E2AC8A119C6707A00E7BB72 /* Supporting Files */,
+			);
+			path = FaceTracker_iOSTests;
+			sourceTree = "<group>";
+		};
+		5E2AC8A119C6707A00E7BB72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E2AC8A219C6707A00E7BB72 /* FaceTracker_iOSTests-Info.plist */,
+				5E2AC8A319C6707A00E7BB72 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E2AC87719C6707A00E7BB72 /* FaceTracker_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E2AC8AA19C6707A00E7BB72 /* Build configuration list for PBXNativeTarget "FaceTracker_iOS" */;
+			buildPhases = (
+				5E2AC87419C6707A00E7BB72 /* Sources */,
+				5E2AC87519C6707A00E7BB72 /* Frameworks */,
+				5E2AC87619C6707A00E7BB72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaceTracker_iOS;
+			productName = FaceTracker_iOS;
+			productReference = 5E2AC87819C6707A00E7BB72 /* FaceTracker_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5E2AC89819C6707A00E7BB72 /* FaceTracker_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E2AC8AD19C6707A00E7BB72 /* Build configuration list for PBXNativeTarget "FaceTracker_iOSTests" */;
+			buildPhases = (
+				5E2AC89519C6707A00E7BB72 /* Sources */,
+				5E2AC89619C6707A00E7BB72 /* Frameworks */,
+				5E2AC89719C6707A00E7BB72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E2AC89F19C6707A00E7BB72 /* PBXTargetDependency */,
+			);
+			name = FaceTracker_iOSTests;
+			productName = FaceTracker_iOSTests;
+			productReference = 5E2AC89919C6707A00E7BB72 /* FaceTracker_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E2AC87019C6707A00E7BB72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "George Georgaklis";
+				TargetAttributes = {
+					5E2AC89819C6707A00E7BB72 = {
+						TestTargetID = 5E2AC87719C6707A00E7BB72;
+					};
+				};
+			};
+			buildConfigurationList = 5E2AC87319C6707A00E7BB72 /* Build configuration list for PBXProject "FaceTracker_iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E2AC86F19C6707A00E7BB72;
+			productRefGroup = 5E2AC87919C6707A00E7BB72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E2AC87719C6707A00E7BB72 /* FaceTracker_iOS */,
+				5E2AC89819C6707A00E7BB72 /* FaceTracker_iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E2AC87619C6707A00E7BB72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E2AC89419C6707A00E7BB72 /* Images.xcassets in Resources */,
+				5E2AC88619C6707A00E7BB72 /* InfoPlist.strings in Resources */,
+				5E2AC88F19C6707A00E7BB72 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E2AC89719C6707A00E7BB72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E2AC8A519C6707A00E7BB72 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E2AC87419C6707A00E7BB72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E2AC89219C6707A00E7BB72 /* ViewController.mm in Sources */,
+				5E2AC88C19C6707A00E7BB72 /* AppDelegate.m in Sources */,
+				5E2AC88819C6707A00E7BB72 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E2AC89519C6707A00E7BB72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E2AC8A719C6707A00E7BB72 /* FaceTracker_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E2AC89F19C6707A00E7BB72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E2AC87719C6707A00E7BB72 /* FaceTracker_iOS */;
+			targetProxy = 5E2AC89E19C6707A00E7BB72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5E2AC88419C6707A00E7BB72 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E2AC88519C6707A00E7BB72 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5E2AC88D19C6707A00E7BB72 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E2AC88E19C6707A00E7BB72 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5E2AC8A319C6707A00E7BB72 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E2AC8A419C6707A00E7BB72 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5E2AC8A819C6707A00E7BB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		5E2AC8A919C6707A00E7BB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E2AC8AB19C6707A00E7BB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FaceTracker_iOS/FaceTracker_iOS-Prefix.pch";
+				INFOPLIST_FILE = "FaceTracker_iOS/FaceTracker_iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5E2AC8AC19C6707A00E7BB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FaceTracker_iOS/FaceTracker_iOS-Prefix.pch";
+				INFOPLIST_FILE = "FaceTracker_iOS/FaceTracker_iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5E2AC8AE19C6707A00E7BB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FaceTracker_iOS.app/FaceTracker_iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FaceTracker_iOS/FaceTracker_iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FaceTracker_iOSTests/FaceTracker_iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5E2AC8AF19C6707A00E7BB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FaceTracker_iOS.app/FaceTracker_iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FaceTracker_iOS/FaceTracker_iOS-Prefix.pch";
+				INFOPLIST_FILE = "FaceTracker_iOSTests/FaceTracker_iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E2AC87319C6707A00E7BB72 /* Build configuration list for PBXProject "FaceTracker_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E2AC8A819C6707A00E7BB72 /* Debug */,
+				5E2AC8A919C6707A00E7BB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E2AC8AA19C6707A00E7BB72 /* Build configuration list for PBXNativeTarget "FaceTracker_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E2AC8AB19C6707A00E7BB72 /* Debug */,
+				5E2AC8AC19C6707A00E7BB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5E2AC8AD19C6707A00E7BB72 /* Build configuration list for PBXNativeTarget "FaceTracker_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E2AC8AE19C6707A00E7BB72 /* Debug */,
+				5E2AC8AF19C6707A00E7BB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5E2AC87019C6707A00E7BB72 /* Project object */;
+}
