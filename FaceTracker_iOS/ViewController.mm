@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"view did load");
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
@@ -41,24 +42,29 @@
 #ifdef __cplusplus
 - (void)processImage:(Mat&)image;
 {
+    //NSLog(@"process image");
     // Do some OpenCV stuff with the image
     //Mat image_copy;
     //cvtColor(image, image_copy, cv::CV_BGRA2BGR);
     
     // invert image
-    // bitwise_not(image_copy, image_copy);
-    //cvtColor(image_copy, image, CV_BGR2BGRA);
+     //bitwise_not(image_copy, image_copy);
+    //cvtColor(image_copy, image, cv::CV_BGR2BGRA);
 }
 #endif
 #pragma mark - UI Actions
 
 - (IBAction)trackerStart:(id)sender
 {
+    NSLog(@"tracker start");
     [self.videoCamera start];
+
 }
 
 -(IBAction)flipCam:(id)sender{
+    NSLog(@"flip cam");
     [self.videoCamera switchCameras];
 }
+
 
 @end

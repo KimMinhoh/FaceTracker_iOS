@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <opencv2/highgui/cap_ios.h>
+#import <opencv2/imgproc.hpp>
+#import <opencv2/objdetect.hpp>
+#include <opencv/highgui.h>
 using namespace cv;
 
 @interface ViewController : UIViewController<CvVideoCameraDelegate>
