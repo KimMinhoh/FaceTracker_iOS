@@ -11,6 +11,8 @@
 #import <opencv2/imgproc.hpp>
 #import <opencv2/objdetect.hpp>
 #include <opencv/highgui.h>
+#include <iostream>
+#include <FaceTracker/Tracker.h>
 using namespace cv;
 
 @interface ViewController : UIViewController<CvVideoCameraDelegate>

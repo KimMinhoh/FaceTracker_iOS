@@ -28,6 +28,8 @@
     self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     self.videoCamera.defaultFPS = 30;
     self.videoCamera.grayscaleMode = NO;
+    
+    
 
 }
 
@@ -58,6 +60,28 @@
 {
     NSLog(@"tracker start");
     [self.videoCamera start];
+    
+    
+    //=========================================================================
+    //parse command line arguments
+    char ftFile[256],conFile[256],triFile[256];
+    bool fcheck = false; double scale = 1; int fpd = -1; bool show = true;
+    //if(parse_cmd(argc,argv,ftFile,conFile,triFile,fcheck,scale,fpd)<0)return 0;
+    
+    //set other tracking parameters
+    std::vector<int> wSize1(1); wSize1[0] = 7;
+    std::vector<int> wSize2(3); wSize2[0] = 11; wSize2[1] = 9; wSize2[2] = 7;
+    int nIter = 5; double clamp=3,fTol=0.01;
+    FACETRACKER::Tracker model(ftFile);
+    cv::Mat tri=FACETRACKER::IO::LoadTri(triFile);
+    cv::Mat con=FACETRACKER::IO::LoadCon(conFile);
+    
+    //initialize camera and display window
+    cv::Mat frame,gray,im; double fps=0; char sss[256]; std::string text;
+    CvCapture* camera = cvCreateCameraCapture(CV_CAP_ANY);
+    int64 t1,t0 = cvGetTickCount(); int fnum=0;
+    cvNamedWindow("Face Tracker",1);
+
 
 }
 
@@ -65,6 +89,5 @@
     NSLog(@"flip cam");
     [self.videoCamera switchCameras];
 }
-
 
 @end
