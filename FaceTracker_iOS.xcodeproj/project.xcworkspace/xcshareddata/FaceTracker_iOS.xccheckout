@@ -14,7 +14,7 @@
 		<string>https://github.com/ggeorgaklis/FaceTracker_iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FaceTracker_iOS.xcodeproj/project.xcworkspace</string>
+	<string>FaceTracker_iOS.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C14EC3F0A8AE3F3EFEC2A464ABE13B4B9821E592</key>
