@@ -208,3 +208,58 @@ void FDet::Read(ifstream &s,bool readType)
   }return;
 }
 //===========================================================================
+void FDet::Read(istringstream &s,bool readType)
+{
+    int i,j,k,l,n,m;
+    if(readType){int type; s >> type; assert(type == IO::FDET);}
+    s >> _min_neighbours >> _min_size >> _img_scale >> _scale_factor >> n;
+    m = sizeof(CvHaarClassifierCascade)+n*sizeof(CvHaarStageClassifier);
+    storage_ = cvCreateMemStorage(0);
+    _cascade = (CvHaarClassifierCascade*)cvAlloc(m);
+    memset(_cascade,0,m);
+    _cascade->stage_classifier = (CvHaarStageClassifier*)(_cascade + 1);
+    _cascade->flags = CV_HAAR_MAGIC_VAL;
+    _cascade->count = n;
+    s >> _cascade->orig_window_size.width >> _cascade->orig_window_size.height;
+    for(i = 0; i < n; i++){
+        s >> _cascade->stage_classifier[i].parent
+        >> _cascade->stage_classifier[i].next
+        >> _cascade->stage_classifier[i].child
+        >> _cascade->stage_classifier[i].threshold
+        >> _cascade->stage_classifier[i].count;
+        _cascade->stage_classifier[i].classifier =
+        (CvHaarClassifier*)cvAlloc(_cascade->stage_classifier[i].count*
+                                   sizeof(CvHaarClassifier));
+        for(j = 0; j < _cascade->stage_classifier[i].count; j++){
+            CvHaarClassifier* classifier =
+            &_cascade->stage_classifier[i].classifier[j];
+            s >> classifier->count;
+            classifier->haar_feature = (CvHaarFeature*)
+            cvAlloc(classifier->count*(sizeof(CvHaarFeature) +
+                                       sizeof(float) + sizeof(int) + sizeof(int))+
+                    (classifier->count+1)*sizeof(float));
+            classifier->threshold =
+            (float*)(classifier->haar_feature+classifier->count);
+            classifier->left = (int*)(classifier->threshold + classifier->count);
+            classifier->right = (int*)(classifier->left + classifier->count);
+            classifier->alpha = (float*)(classifier->right + classifier->count);
+            for(k = 0; k < classifier->count; k++){
+                s >> classifier->threshold[k]
+                >> classifier->left[k]
+                >> classifier->right[k]
+                >> classifier->alpha[k]
+                >> classifier->haar_feature[k].tilted;
+                for(l = 0; l < CV_HAAR_FEATURE_MAX; l++){
+                    s >> classifier->haar_feature[k].rect[l].weight
+                    >> classifier->haar_feature[k].rect[l].r.x
+                    >> classifier->haar_feature[k].rect[l].r.y
+                    >> classifier->haar_feature[k].rect[l].r.width
+                    >> classifier->haar_feature[k].rect[l].r.height;
+                }
+            }
+            s >> classifier->alpha[classifier->count];
+        }
+    }return;
+}
+
+//===========================================================================

@@ -63,6 +63,7 @@ namespace FACETRACKER
     void Save(const char* fname);
     void Write(std::ofstream &s);
     void Read(std::ifstream &s,bool readType = true);
+    void Read(std::istringstream &s,bool readType = true);
     void Init(int t, double a, double b, cv::Mat &W);
     void Response(cv::Mat &im,cv::Mat &resp);    
 

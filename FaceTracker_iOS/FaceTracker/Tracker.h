@@ -102,6 +102,7 @@ namespace FACETRACKER
 
     /** Read tracking from file stream */
     void Read(std::ifstream &s,bool readType = true);
+    void Read(std::istringstream &s,bool readType = true);
 
   private:
     cv::Mat gray_,temp_,ncc_,small_;

@@ -107,6 +107,16 @@ void PAW::Write(ofstream &s)
   return;
 }
 //===========================================================================
+void PAW::Read(istringstream &s,bool readType) {
+    if(readType){int type; s >> type; assert(type == IO::PAW);}
+    s >> _nPix >> _xmin >> _ymin;
+    IO::ReadMatString(s,_src); IO::ReadMatString(s,_tri); IO::ReadMatString(s,_tridx);
+    IO::ReadMatString(s,_mask); IO::ReadMatString(s,_alpha); IO::ReadMatString(s,_beta);
+    _mapx.create(_mask.rows,_mask.cols,CV_32F);
+    _mapy.create(_mask.rows,_mask.cols,CV_32F);
+    _coeff.create(this->nTri(),6,CV_64F); _dst = _src; return;
+}
+//===========================================================================
 void PAW::Read(ifstream &s,bool readType)
 {
   if(readType){int type; s >> type; assert(type == IO::PAW);}

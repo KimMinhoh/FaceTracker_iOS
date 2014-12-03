@@ -131,6 +131,12 @@ void Patch::Write(ofstream &s)
   IO::WriteMat(s,_W); return;
 }
 //===========================================================================
+void Patch::Read(istringstream &s,bool readType)
+{
+    if(readType){int type; s >> type; assert(type == IO::PATCH);}
+    s >> _t >> _a >> _b; IO::ReadMatString(s,_W); return;
+}
+//===========================================================================
 void Patch::Read(ifstream &s,bool readType)
 {
   if(readType){int type; s >> type; assert(type == IO::PATCH);}

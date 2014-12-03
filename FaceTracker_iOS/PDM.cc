@@ -333,11 +333,22 @@ void PDM::ApplySimT(double a,double b,double tx,double ty,cv::Mat &pglobl)
   return;
 }
 //===========================================================================
-void PDM::Read(ifstream &s,bool readType)
+void PDM::Read(std::istringstream &s, bool readType) {
+      if(readType){
+          int type; s >> type; assert(type == IO::PDM);
+      }
+      IO::ReadMatString(s,_V); IO::ReadMatString(s,_E); IO::ReadMatString(s,_M);
+      S_.create(_M.rows,1,CV_64F);
+      R_.create(3,3,CV_64F); s_.create(_M.rows,1,CV_64F); P_.create(2,3,CV_64F);
+      Px_.create(2,3,CV_64F); Py_.create(2,3,CV_64F); Pz_.create(2,3,CV_64F);
+      R1_.create(3,3,CV_64F); R2_.create(3,3,CV_64F); R3_.create(3,3,CV_64F);
+}
+//===========================================================================
+void PDM::Read(ifstream &s,bool readType) //change this to read string stream
 {
   if(readType){int type; s >> type; assert(type == IO::PDM);}
   IO::ReadMat(s,_V); IO::ReadMat(s,_E); IO::ReadMat(s,_M); 
-  S_.create(_M.rows,1,CV_64F);  
+  S_.create(_M.rows,1,CV_64F);
   R_.create(3,3,CV_64F); s_.create(_M.rows,1,CV_64F); P_.create(2,3,CV_64F);
   Px_.create(2,3,CV_64F); Py_.create(2,3,CV_64F); Pz_.create(2,3,CV_64F);
   R1_.create(3,3,CV_64F); R2_.create(3,3,CV_64F); R3_.create(3,3,CV_64F);
@@ -346,17 +357,17 @@ void PDM::Read(ifstream &s,bool readType)
 //===========================================================================
 void PDM::Write(ofstream &s)
 {
-  s << IO::PDM << " ";
-  IO::WriteMat(s,_V); IO::WriteMat(s,_E); IO::WriteMat(s,_M); return;
+//  s << IO::PDM << " ";
+//  IO::WriteMat(s,_V); IO::WriteMat(s,_E); IO::WriteMat(s,_M); return;
 }
 //===========================================================================
 void PDM::Load(const char* fname)
 {
-  ifstream s(fname); assert(s.is_open()); this->Read(s); s.close(); return;
+//  ifstream s(fname); assert(s.is_open()); this->Read(s); s.close(); return;
 }
 //===========================================================================
 void PDM::Save(const char* fname)
 {
-  ofstream s(fname); assert(s.is_open()); this->Write(s);s.close(); return;
+//  ofstream s(fname); assert(s.is_open()); this->Write(s);s.close(); return;
 }
 //===========================================================================

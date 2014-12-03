@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E1D186C1A057028009F97A8 /* face_con.h in Resources */ = {isa = PBXBuildFile; fileRef = 5E1D18681A057028009F97A8 /* face_con.h */; };
+		5E1D186D1A057028009F97A8 /* face_tracker.h in Resources */ = {isa = PBXBuildFile; fileRef = 5E1D18691A057028009F97A8 /* face_tracker.h */; };
+		5E1D186E1A057028009F97A8 /* face_tri.h in Resources */ = {isa = PBXBuildFile; fileRef = 5E1D186A1A057028009F97A8 /* face_tri.h */; };
+		5E1D186F1A057028009F97A8 /* face2_tracker.h in Resources */ = {isa = PBXBuildFile; fileRef = 5E1D186B1A057028009F97A8 /* face2_tracker.h */; };
 		5E24CCC719CBB9F300E93FC5 /* CLM.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5E24CCBF19CBB9F300E93FC5 /* CLM.cc */; };
 		5E24CCC819CBB9F300E93FC5 /* FCheck.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5E24CCC019CBB9F300E93FC5 /* FCheck.cc */; };
 		5E24CCC919CBB9F300E93FC5 /* FDet.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5E24CCC119CBB9F300E93FC5 /* FDet.cc */; };
@@ -50,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E1D18681A057028009F97A8 /* face_con.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = face_con.h; sourceTree = "<group>"; };
+		5E1D18691A057028009F97A8 /* face_tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = face_tracker.h; sourceTree = "<group>"; };
+		5E1D186A1A057028009F97A8 /* face_tri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = face_tri.h; sourceTree = "<group>"; };
+		5E1D186B1A057028009F97A8 /* face2_tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = face2_tracker.h; sourceTree = "<group>"; };
 		5E24CCBF19CBB9F300E93FC5 /* CLM.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CLM.cc; sourceTree = "<group>"; };
 		5E24CCC019CBB9F300E93FC5 /* FCheck.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCheck.cc; sourceTree = "<group>"; };
 		5E24CCC119CBB9F300E93FC5 /* FDet.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FDet.cc; sourceTree = "<group>"; };
@@ -285,6 +293,10 @@
 		5E24CCCF19CBB9FF00E93FC5 /* FaceTracker */ = {
 			isa = PBXGroup;
 			children = (
+				5E1D18681A057028009F97A8 /* face_con.h */,
+				5E1D18691A057028009F97A8 /* face_tracker.h */,
+				5E1D186A1A057028009F97A8 /* face_tri.h */,
+				5E1D186B1A057028009F97A8 /* face2_tracker.h */,
 				5E24CCD019CBB9FF00E93FC5 /* CLM.h */,
 				5E24CCD119CBB9FF00E93FC5 /* FCheck.h */,
 				5E24CCD219CBB9FF00E93FC5 /* FDet.h */,
@@ -734,7 +746,7 @@
 				ORGANIZATIONNAME = "George Georgaklis";
 				TargetAttributes = {
 					5E2AC87719C6707A00E7BB72 = {
-						DevelopmentTeam = 47J734W9F8;
+						DevelopmentTeam = AVLAT9G7S9;
 					};
 					5E2AC89819C6707A00E7BB72 = {
 						TestTargetID = 5E2AC87719C6707A00E7BB72;
@@ -765,9 +777,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E1D186E1A057028009F97A8 /* face_tri.h in Resources */,
 				5E2AC89419C6707A00E7BB72 /* Images.xcassets in Resources */,
+				5E1D186F1A057028009F97A8 /* face2_tracker.h in Resources */,
+				5E1D186C1A057028009F97A8 /* face_con.h in Resources */,
 				5E2AC88619C6707A00E7BB72 /* InfoPlist.strings in Resources */,
 				5E2AC88F19C6707A00E7BB72 /* Main.storyboard in Resources */,
+				5E1D186D1A057028009F97A8 /* face_tracker.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -933,10 +949,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FaceTracker_iOS/FaceTracker_iOS-Prefix.pch";
 				INFOPLIST_FILE = "FaceTracker_iOS/FaceTracker_iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = /Users/George/iOS_Apps/FaceTracker_iOS/FaceTracker_iOS;
+				VALID_ARCHS = "armv7 armv7s";
+				"VALID_ARCHS[sdk=*]" = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -956,10 +976,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FaceTracker_iOS/FaceTracker_iOS-Prefix.pch";
 				INFOPLIST_FILE = "FaceTracker_iOS/FaceTracker_iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = /Users/George/iOS_Apps/FaceTracker_iOS/FaceTracker_iOS;
+				VALID_ARCHS = "armv7 armv7s";
+				"VALID_ARCHS[sdk=*]" = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

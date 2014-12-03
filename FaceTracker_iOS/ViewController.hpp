@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ViewController.hpp
 //  FaceTracker_iOS
 //
 //  Created by George Georgaklis on 9/14/14.
@@ -13,13 +13,21 @@
 #include <opencv/highgui.h>
 #include <iostream>
 #include <FaceTracker/Tracker.h>
+#import <Foundation/Foundation.h>
+#import <CoreMedia/CoreMedia.h>
+#import <AVFoundation/AVFoundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import <CoreImage/CoreImage.h>
 using namespace cv;
 
-@interface ViewController : UIViewController<CvVideoCameraDelegate>
-{
+@interface ViewController : UIViewController<CvVideoCameraDelegate, AVCaptureVideoDataOutputSampleBufferDelegate> {
     IBOutlet UIImageView* videoView;
     IBOutlet UIButton* start;
     IBOutlet UIButton* flip;
+    UIView *faceView;
+    UIView *leftEyeView;
+    UIView *rightEye;
+    UIView *mouth;
 }
 
 @property (nonatomic, strong) CvVideoCamera* videoCamera;
@@ -27,6 +35,18 @@ using namespace cv;
 - (IBAction)trackerStart:(id)sender;
 
 - (IBAction)flipCam:(id)sender;
+
+- (IBAction)capture:(id)sender;
+
+- (cv::Mat)cvMatFromUIImage:(UIImage *)image;
+
+- (UIImage *)UIImageFromCVMat:(cv::Mat)cvMat;
+
+- (void)captureOutput:(AVCaptureOutput *)captureOutput idOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection;
+
+- (UIImage *) imageFromSampleBuffer:(CMSampleBufferRef) sampleBuffer;
+
+
 
 
 @end

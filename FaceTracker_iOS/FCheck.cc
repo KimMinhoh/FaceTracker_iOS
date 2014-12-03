@@ -72,6 +72,14 @@ void FCheck::Write(ofstream &s)
   IO::WriteMat(s,_w); _paw.Write(s); return;
 }
 //===========================================================================
+void FCheck::Read(istringstream &s,bool readType)
+{
+    if(readType){int type; s >> type; assert(type == IO::FCHECK);}
+    s >> _b; IO::ReadMatString(s,_w); _paw.Read(s);
+    crop_.create(_paw._mask.rows,_paw._mask.cols,CV_8U);
+    vec_.create(_paw._nPix,1,CV_64F); return;
+}
+//===========================================================================
 void FCheck::Read(ifstream &s,bool readType)
 {
   if(readType){int type; s >> type; assert(type == IO::FCHECK);}
@@ -119,6 +127,13 @@ void MFCheck::Write(ofstream &s)
 {
   s << IO::MFCHECK << " " << _fcheck.size() << " ";
   for(int i = 0; i < (int)_fcheck.size(); i++)_fcheck[i].Write(s); return;
+}
+//===========================================================================
+void MFCheck::Read(istringstream &s,bool readType)
+{
+    if(readType){int type; s >> type; assert(type == IO::MFCHECK);}
+    int n; s >> n; _fcheck.resize(n);
+    for(int i = 0; i < n; i++)_fcheck[i].Read(s); return;
 }
 //===========================================================================
 void MFCheck::Read(ifstream &s,bool readType)

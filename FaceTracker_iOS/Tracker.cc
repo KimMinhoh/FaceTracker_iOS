@@ -74,6 +74,15 @@ void Tracker::Write(ofstream &s)
     << _simil[2] << " " << _simil[3] << " "; return;
 }
 //===========================================================================
+void Tracker::Read(istringstream &s,bool readType)
+{
+    if(readType){int type; s >> type; assert(type == IO::TRACKER);}
+    //_clm.Read(s); _fdet.Read(s); _fcheck.Read(s); IO::ReadMatString(s,_rshape);
+    s >> _simil[0] >> _simil[1] >> _simil[2] >> _simil[3];
+    _shape.create(2*_clm._pdm.nPoints(),1,CV_64F);
+    _rect.x = 0; _rect.y = 0; _rect.width = 0; _rect.height = 0;
+    _frame = -1; _clm._pdm.Identity(_clm._plocal,_clm._pglobl); return;
+}
 void Tracker::Read(ifstream &s,bool readType)
 {
   if(readType){int type; s >> type; assert(type == IO::TRACKER);}

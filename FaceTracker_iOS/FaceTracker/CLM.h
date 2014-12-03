@@ -71,6 +71,7 @@ namespace FACETRACKER
     void Save(const char* fname);
     void Write(std::ofstream &s);
     void Read(std::ifstream &s,bool readType = true);
+    void Read(std::istringstream &s,bool readType = true);
     void Init(PDM &s,cv::Mat &r, std::vector<cv::Mat> &c,
 	      std::vector<cv::Mat> &v,std::vector<std::vector<MPatch> > &p);
     void Fit(cv::Mat im, std::vector<int> &wSize,
