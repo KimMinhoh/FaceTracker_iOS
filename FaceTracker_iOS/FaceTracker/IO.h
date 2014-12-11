@@ -41,8 +41,10 @@
 #define __IO_h_
 #include <opencv/cv.h>
 #include <fstream>
-//#include <face_tri.h>
-//#include <face_con.h>
+#include <istream>
+
+#include <face_tri.h>
+#include <face_con.h>
 namespace FACETRACKER
 {
     //===========================================================================
@@ -58,8 +60,8 @@ namespace FACETRACKER
         static cv::Mat LoadTri(const char* fname);
         static void ReadMatString(std::istringstream& s,cv::Mat &M);
         static void WriteMatString(std::ostringstream& s,cv::Mat &M);
-        static cv::Mat LoadConString(const char* fname);
-        static cv::Mat LoadTriString(const char* fname);
+        static cv::Mat LoadConString(std::istringstream &file);
+        static cv::Mat LoadTriString(std::istringstream &file);
     };
     //===========================================================================
 }

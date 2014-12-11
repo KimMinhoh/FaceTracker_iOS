@@ -33,7 +33,7 @@
     rightEye = nil;
     leftEyeView = nil;
     mouth = nil;
-
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,12 +55,12 @@ void getGray(const cv::Mat& input, cv::Mat& gray) {
     Mat image_copy;
     cvtColor(image, image_copy, CV_BGRA2BGR);
     
-     //invert image
+    //invert image
     bitwise_not(image_copy, image_copy);
     cvtColor(image_copy, image, CV_BGR2BGRA);
     
-//    UIImage *img = [self UIImageFromCVMat:image];
-//    [self markFaces:img];
+    //    UIImage *img = [self UIImageFromCVMat:image];
+    //    [self markFaces:img];
 }
 #endif
 #pragma mark - UI Actions
@@ -121,35 +121,40 @@ void Draw(cv::Mat &image,cv::Mat &shape,cv::Mat &con,cv::Mat &tri,cv::Mat &visi)
 }
 
 -(void)processOneImage:(cv::Mat)img {
-//    //parse command line arguments
-//    char ftFile[256],conFile[256],triFile[256];
-//    bool fcheck = false; int fpd = -1; bool show = true;
-//    
-//    //set other tracking parameters
-//    std::vector<int> wSize1(1); wSize1[0] = 7;
-//    std::vector<int> wSize2(3); wSize2[0] = 11; wSize2[1] = 9; wSize2[2] = 7;
-//    int nIter = 5; double clamp=3,fTol=0.01;
-//    
-//    cv::Mat gray;
-//    
-//    //18 linker errors here
-//    FACETRACKER::Tracker model(ftFile);
-//    cv::Mat tri = FACETRACKER::IO::LoadTri(triFile);
-//    cv::Mat con = FACETRACKER::IO::LoadCon(conFile);
-//    
-//    //track this image
-//    //convert input image to gray scale
-//    cv::cvtColor(img,gray,CV_BGR2GRAY);
-//    
-//    if(model.Track(gray,wSize1,fpd,nIter,clamp,fTol,fcheck) == 0){
-//        int idx = model._clm.GetViewIdx();
-//        //walk the data structure filled in by the track model
-//        Draw(img,model._shape,con,tri,model._clm._visi[idx]);
-//    }else{
-//        if(show){
-//            cv::Mat R(img,cvRect(0,0,150,50)); R = cv::Scalar(0,0,255);
-//        }
-//    }
+    //parse command line arguments
+    //char ftFile[256],conFile[256],triFile[256];
+    bool fcheck = false; int fpd = -1; bool show = true;
+    
+    //set other tracking parameters
+    std::vector<int> wSize1(1); wSize1[0] = 7;
+    std::vector<int> wSize2(3); wSize2[0] = 11; wSize2[1] = 9; wSize2[2] = 7;
+    int nIter = 5; double clamp=3,fTol=0.01;
+    
+    cv::Mat gray;
+    
+    //load files into strings
+    std::istringstream ftFile(face_tracker);
+    std::istringstream triFile(face_tri);
+    std::istringstream conFile(face_con);
+    
+    //18 linker errors here
+    FACETRACKER::Tracker model("FaceTracker"); //what does this do?
+    cv::Mat tri = FACETRACKER::IO::LoadTriString(triFile);
+    cv::Mat con = FACETRACKER::IO::LoadConString(conFile);
+    
+    //track this image
+    //convert input image to gray scale
+    cv::cvtColor(img,gray,CV_BGR2GRAY);
+    
+    if(model.Track(gray,wSize1,fpd,nIter,clamp,fTol,fcheck) == 0){
+        int idx = model._clm.GetViewIdx();
+        //walk the data structure filled in by the track model
+        Draw(img,model._shape,con,tri,model._clm._visi[idx]);
+    }else{
+        if(show){
+            cv::Mat R(img,cvRect(0,0,150,50)); R = cv::Scalar(0,0,255);
+        }
+    }
 }
 
 - (cv::Mat)cvMatFromUIImage:(UIImage *)image {
