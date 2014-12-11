@@ -133,12 +133,11 @@ void Draw(cv::Mat &image,cv::Mat &shape,cv::Mat &con,cv::Mat &tri,cv::Mat &visi)
     cv::Mat gray;
     
     //load files into strings
-    std::istringstream ftFile(face_tracker);
     std::istringstream triFile(face_tri);
     std::istringstream conFile(face_con);
     
     //18 linker errors here
-    FACETRACKER::Tracker model("FaceTracker"); //what does this do?
+    FACETRACKER::Tracker model("FaceTracker");
     cv::Mat tri = FACETRACKER::IO::LoadTriString(triFile);
     cv::Mat con = FACETRACKER::IO::LoadConString(conFile);
     

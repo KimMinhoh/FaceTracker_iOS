@@ -85,7 +85,7 @@ void Tracker::Write(ofstream &s)
 void Tracker::Read(istringstream &s,bool readType)
 {
     if(readType){int type; s >> type; assert(type == IO::TRACKER);}
-    //_clm.Read(s); _fdet.Read(s); _fcheck.Read(s); IO::ReadMatString(s,_rshape);
+    _clm.Read(s); _fdet.Read(s); _fcheck.Read(s); IO::ReadMatString(s,_rshape);
     s >> _simil[0] >> _simil[1] >> _simil[2] >> _simil[3];
     _shape.create(2*_clm._pdm.nPoints(),1,CV_64F);
     _rect.x = 0; _rect.y = 0; _rect.width = 0; _rect.height = 0;
